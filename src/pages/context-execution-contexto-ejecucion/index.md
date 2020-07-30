@@ -4,11 +4,15 @@ date: '2020-07-25'
 description: 'O mas bien, el de cuando empecé a leer la especificación ECMAScript por el capítulo del execution context.'
 ---
 
+O mas bien, el de cuando empecé a leer la especificación ECMAScript por el capítulo del execution context. No fue mi mejor idea, la especificación es dura de leer, hace falta motivación, en alquel momento me conformé con acabar ese capítulo. Entenderlo ya fue otra cosa, una lectura no fue ni mucho menos suficiente, para llegar a comprender al menos algo del documento. Pero bueno un comienzo es un comienzo.
+
+## ¿Qué es el context execution?
+
 El contexto de ejecución de una implementación de la especificación [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm), como por ejemplo el [motor V8 de JavaScript](https://v8.dev) utilizado por Google Chrome o Node.js, se utiliza para realizar el seguimiento y evaluación del código en tiempo de ejecución. Para ser mas exactos, según el punto [8.3 Execution Context](https://tc39.es/ecma262/#sec-execution-contexts) del documento de la [especificación](https://tc39.es/ecma262/), un contexto de ejecución es:
 
 > An execution context is a specification device that is used to track the runtime evaluation of code by an ECMAScript implementation. 
 
-Partiendo de esa definición, podemos hacernos solo una ligera idea de lo que es en realidad es el contexto de ejecución y todo lo que implica. <strike>Ya que si leemos la sección entera de la especificación podemos ver que es un agente el que sabe cual es el contexto activo, contiene la pila de contextos de ejecución, la cola de trabajos pendientes y la cola de Promises pendientes, pero todo eso esta más allá del alcance de éste artículo.</strike> Sin embargo, si que hay algo que podemos extraer claramente y es que el contexto de ejecución esta directamente relacionado con el código que se esta ejecutando.
+Partiendo de esa definición, podemos hacernos solo una ligera idea de lo que es en realidad es el contexto de ejecución y todo lo que implica. Sin embargo, si que hay algo que podemos extraer claramente y es que el contexto de ejecución esta directamente relacionado con el código que se esta ejecutando.
 
 ## Execution context stack y running execution context
 
@@ -28,13 +32,6 @@ const acumulado = acumulador(3);
 console.log(acumulado)
 ```
 A partir del ejemplo anterior vamos a ver como se va llenando la pila del contexto de ejecución y como va cambiando el running execution context. Hay que tener en cuenta que no importa que sea una función recursiva, por cada llamada a la función `acumulador` se creará un nuevo contexto de ejecución.
-
-<video controls>
-  <source src="/execution-context/execution-context-stack.webm" type="video/webm">
-  <source src="/execution-context/execution-context-stack.ogg" type="video/ogg">
-  <source src="/execution-context/execution-context-stack.mp4" type="video/mp4">
-  Tu navegador no implementa el elemento <code>video</code>.
-</video>
 
 Es interesante recalcar los siguientes puntos acerca del execution context stack:
 - Es single threaded.
