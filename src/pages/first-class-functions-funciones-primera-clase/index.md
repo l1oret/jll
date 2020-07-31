@@ -18,18 +18,23 @@ const diHola = function () {
   console.log('¡Hola!');
 };
 
-diHola(); // ¡Hola!
+diHola();
+// → ¡Hola!
 
 // Array
 const saludos = [];
 saludos.push(diHola);
-console.log(saludos); // [f]
-saludos[0](); // ¡Hola!
+console.log(saludos);
+// → [f]
+saludos[0]();
+// → ¡Hola!
 
 // Object
 const saludo = { diHola };
-console.log(saludo); // {diHola: f}
-saludo.diHola(); // ¡Hola!
+console.log(saludo);
+// → {diHola: f}
+saludo.diHola();
+// → ¡Hola!
 ```
 
 ### Pasadas como argumentos en una función
@@ -40,7 +45,8 @@ function diHola() {
 }
 
 function saludar(saludo, nombre) {
-  console.log(saludo(), nombre); // Hola JavaScript
+  console.log(saludo(), nombre);
+  // → Hola JavaScript
 }
 
 // Pasamos `diHola` como argumento de la función saludar
@@ -62,8 +68,10 @@ con doble paréntesis.
 
 ```javascript
 const saludar = diHola();
-saludar(); // ¡Hola!
-diHola()(); // ¡Hola!
+saludar();
+// → ¡Hola!
+diHola()();
+// → ¡Hola!
 ```
 
 A una función que devuelve una función se le llama habitualmente [higher-order

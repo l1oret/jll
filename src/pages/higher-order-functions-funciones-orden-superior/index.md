@@ -86,7 +86,8 @@ ciudadesNombreCompuesto([
   'Nueva York',
   'Sidney',
   'Wellington',
-]); // → ['Nueva York']
+]);
+// → ['Nueva York']
 ```
 
 A partir de esa misma lista de ciudades, ahora queremos obtener todas las ciudades cuyo nombre empiece por 'M':
