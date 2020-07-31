@@ -75,4 +75,4 @@ diHola()();
 ```
 
 A una función que devuelve una función se le llama habitualmente [higher-order
-function](/higher-order-functions). Pero eso ya lo veremos en el siguiente episodio: [El de las higher-order functions o funciones de orden superior](/higher-order-functions). Por cierto, [este es la entrada en MDN de las funciones de primera de clase](https://developer.mozilla.org/es/docs/Glossary/Funcion_de_primera_clase).
+function](/higher-order-functions-funciones-orden-superior). Pero eso ya lo veremos en el siguiente episodio: [El de las higher-order functions o funciones de orden superior](/higher-order-functions-funciones-orden-superior). Por cierto, [este es la entrada en MDN de las funciones de primera de clase](https://developer.mozilla.org/es/docs/Glossary/Funcion_de_primera_clase).

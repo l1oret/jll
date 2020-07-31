@@ -8,7 +8,7 @@ O mas bien, el de todo tiene un nombre, osea que mejor me voy aprendiendo que es
 
 ## ¿Qué son las higher-order functions?
 
-Como ya vimos en las primas hermanas de las [first-class functions](/first-class-functions), a la función o funciones que reciben como parámetro otra función, que devuelven una función o ambas, se les denomina **higher-order functions**. Habitualmente son utlizadas para abstraer, simplificar o evitar escribir código duplicado. Suele ser comun en un programa hacer cualquier operación un numero determinado de veces.
+Como ya vimos en las primas hermanas de las [first-class functions](/first-class-functions-funciones-primera-clase), a la función o funciones que reciben como parámetro otra función, que devuelven una función o ambas, se les denomina **higher-order functions**. Habitualmente son utlizadas para abstraer, simplificar o evitar escribir código duplicado. Suele ser comun en un programa hacer cualquier operación un numero determinado de veces.
 
 ```javascript
 for (let i = 0; i < 3; i++) {
@@ -118,7 +118,7 @@ ciudadesEmpiezanM([
 
 Creo que salta a la vista que ambos scripts tienen código repetido. Se puede reconocer un patrón que pide a gritos ser convertido en una solución mas abstracta y general. Ambas funciones iteran sobre una lista de ciudades y le aplican un filtro para acabar obteniendo una lista filtrada con igual o menos ciudades que la lista original recibida.
 
-Nuestras viejas conocidas del episodio de las [first-class functions](/first-class-functions) nos hacen mas fácil el proceso de abstracción. Por lo tanto, siguiendo un proceso parecido al del primer ejemplo vamos a empezar creando una función que abstraiga la iteración sobre la lista y que devuelva esa misma lista igual o reducida, en este caso, por ejemplo, a una cadena de texto de ciudades en mayúsculas.
+Nuestras viejas conocidas del episodio de las [first-class functions](/first-class-functions-funciones-primera-clase) nos hacen mas fácil el proceso de abstracción. Por lo tanto, siguiendo un proceso parecido al del primer ejemplo vamos a empezar creando una función que abstraiga la iteración sobre la lista y que devuelva esa misma lista igual o reducida, en este caso, por ejemplo, a una cadena de texto de ciudades en mayúsculas.
 
 ```javascript{1,12}
 const reduce = (ciudades, funcionRedutora, valorInicial) => {
