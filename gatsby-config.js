@@ -8,7 +8,10 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://joseluislloret.es`,
     social: {
-      twitter: `l1oret`,
+      twitter: `https://twitter.com/l1oret`,
+      github: `https://github.com/l1oret`,
+      linkedIn: `https://www.linkedin.com/in/jose-luis-lloret`,
+      mdn: `https://wiki.developer.mozilla.org/es/profiles/l1oret`
     },
   },
   plugins: [

@@ -59,7 +59,7 @@ const Bio = () => {
       <p>
         Blog personal de 
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a href={social.twitter}>
           {author.name}
         </a>.
         <br />
