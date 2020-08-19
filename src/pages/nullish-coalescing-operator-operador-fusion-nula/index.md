@@ -85,4 +85,4 @@ expresion || (expresion ?? expresion);
 expresion ?? (expresion || expresion);
 ```
 
-También interesante es su uso en combinación con su *colega* el optional chaining operator `?.` que veremos próximamente.
+También interesante es su uso en combinación con su *colega* el [optional chaining operator](/optional-chaining-operator-operador-ecandenamiento-opcional) `?.` que veremos próximamente.
