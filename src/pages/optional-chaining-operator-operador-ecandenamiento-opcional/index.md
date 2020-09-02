@@ -8,7 +8,7 @@ O mas bien, el cuando decidí que era ya era hora de ponerse al día con propues
 
 ## ¿Qué es el optional chaining operator?
 
-El optional chaining operator `?.` es un **operador de ecadenamiento** como `.`, pero con una importante diferencia. El operador de ecadenamiento opcional permite leer una propiedad de un objeto o de un conjunto de objetos conectados sin tener que validar expresamente si cada una de las propiedades intermedias son válidas. Lo cual no es posible con el operador de encadenamiento tradicional `.` ya que causaría un error.
+El optional chaining operator `?.` es un **operador de encadenamiento** como `.`, pero con una importante diferencia. El operador de encadenamiento opcional permite leer una propiedad de un objeto o de un conjunto de objetos conectados sin tener que validar expresamente si cada una de las propiedades intermedias son válidas. Lo cual no es posible con el operador de encadenamiento tradicional `.` ya que causaría un error.
 
 ```javascript
 const blog = {
@@ -96,7 +96,7 @@ if(Array.isArray(db.usuarios)) {
 }
 ```
 
-Es conveniente utilizar únicamente `?.` cuando sea necesario. Si sabemos a ciencia cierta que siempre que exista el usuario tendrá el objeto `nombreCompleto` y la propiedad `primerApellido` esta desaconsejado utilizar el encadenamiento opcional. Sin embargo, si tenemos claro que `db` va estar siempre defenida, pero es posible que `usuarios` no y mucho menos `usuarios[4]` entonces ahí si que sería aconsejado utilizar `?.`.
+Es conveniente utilizar únicamente `?.` cuando sea necesario. Si sabemos a ciencia cierta que siempre que exista el usuario tendrá el objeto `nombreCompleto` y la propiedad `primerApellido` esta desaconsejado utilizar el encadenamiento opcional. Sin embargo, si tenemos claro que `db` va estar siempre definida, pero es posible que `usuarios` no y mucho menos `usuarios[4]` entonces ahí si que sería aconsejado utilizar `?.`.
 
 Por último, otro caso de uso sería:
 

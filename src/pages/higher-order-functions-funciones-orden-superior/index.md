@@ -4,11 +4,11 @@ date: '2020-05-02'
 description: 'O mas bien, el de todo tiene un nombre, osea que mejor me voy aprendiendo que es eso de las higher-order functions.'
 ---
 
-O mas bien, el de todo tiene un nombre, osea que mejor me voy aprendiendo que es eso de las **higher-order functions**. Y tal vez, ni tan siquiera era necesario que lo aprendiera porque es algo que habia usado cientos de veces. Pero la cuestión es que no tenía ni la mas remota idea de que una **función de orden superior** era exactamente esto. Increible que pueda parecer o no, para mi eran simplemente funciones que se pasaban, LOL.
+O mas bien, el de todo tiene un nombre, osea que mejor me voy aprendiendo que es eso de las **higher-order functions**. Y tal vez, ni tan siquiera era necesario que lo aprendiera porque es algo que había usado cientos de veces. Pero la cuestión es que no tenía ni la mas remota idea de que una **función de orden superior** era exactamente esto. Increíble que pueda parecer o no, para mi eran simplemente funciones que se pasaban, LOL.
 
 ## ¿Qué son las higher-order functions?
 
-Como ya vimos en las primas hermanas de las [first-class functions](/first-class-functions-funciones-primera-clase), a la función o funciones que reciben como parámetro otra función, que devuelven una función o ambas, se les denomina **higher-order functions**. Habitualmente son utlizadas para abstraer, simplificar o evitar escribir código duplicado. Suele ser comun en un programa hacer cualquier operación un numero determinado de veces.
+Como ya vimos en las primas hermanas de las [first-class functions](/first-class-functions-funciones-primera-clase), a la función o funciones que reciben como parámetro otra función, que devuelven una función o ambas, se les denomina **higher-order functions**. Habitualmente son utilizadas para abstraer, simplificar o evitar escribir código duplicado. Suele ser común en un programa hacer cualquier operación un numero determinado de veces.
 
 ```javascript
 for (let i = 0; i < 3; i++) {
@@ -49,7 +49,7 @@ repetir(3, Math.sin);
 // → 0.9092974268256817
 ```
 
-Por supuesto, no es obligatorio pasarle una función de JS, podemos pasarle cualquier función e incluso pasarle una funcion por valor creada en el momento.
+Por supuesto, no es obligatorio pasarle una función de JS, podemos pasarle cualquier función e incluso pasarle una función por valor creada en el momento.
 
 ```javascript
 function repetir(repeticiones, accion) {
@@ -145,7 +145,7 @@ reduce(
 // → MADRIDMIAMINUEVA YORKSIDNEYWELLINGTON
 ```
 
-Una vez tenemos la función para abstraer la iteración ya podemos centrarnos en crear el filtro, que es la única parte diferente del código superior. Para ello, crearemos una función de filtro que recibe un array (en este caso de ciudades) y la función por la cual queremos filtrar cada uno de los elementos del array. Hay que tener en cuenta que en este caso, lo que queremos es obtener una lista de igual o menor tamaño en lugar de un único valor. Por este motivo, la función `funcionRedutora` siempre y cuando se cumpla el filtro añadirá los elementos al array de acumlados.
+Una vez tenemos la función para abstraer la iteración ya podemos centrarnos en crear el filtro, que es la única parte diferente del código superior. Para ello, crearemos una función de filtro que recibe un array (en este caso de ciudades) y la función por la cual queremos filtrar cada uno de los elementos del array. Hay que tener en cuenta que en este caso, lo que queremos es obtener una lista de igual o menor tamaño en lugar de un único valor. Por este motivo, la función `funcionRedutora` siempre y cuando se cumpla el filtro añadirá los elementos al array de acumulados.
 
 ```javascript{1,11,20,29}
 const reduce = (array, funcionRedutora, valorInicial) => {
@@ -186,7 +186,7 @@ filter(
 // → ['Madrid', 'Miami']
 ```
 
-Sin lugar a dudas las **higher-order functions** son una herramienta muy pontente a la hora de abstraer y simplificar el código.
+Sin lugar a dudas las **higher-order functions** son una herramienta muy potente a la hora de abstraer y simplificar el código.
 
 Algunos ejemplos del propio lenguaje, como quizás hayas podido intuir son las funciones [`map()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map), [`filter()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter) o [`reduce()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce).
 
@@ -208,3 +208,14 @@ ciudades.filter((ciudad) => ciudad.split(' ').length > 1);
 ciudades.filter((ciudad) => ciudad.startsWith('M'));
 // → ['Madrid', 'Miami']
 ```
+
+Otras higher-order functions del lenguaje son:
+
+- [`every()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/every)
+- [`find()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/find)
+- [`findIndex()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/findIndex)
+- [`flatMap()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flatMap)
+- [`forEach()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
+- [`reduceRight()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduceRight)
+- [`some()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/some)
+

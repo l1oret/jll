@@ -60,7 +60,7 @@ console.log('' ?? 'TC39');
 // → ''
 ```
 
-Hay que tener en cuenta que si se quiere [utilizar `??` juanto a los operadores lógicos](https://v8.dev/features/nullish-coalescing#mixing-and-matching-operators) **AND** `&&` o **OR** `||` es necesario añadir paréntesis para evitar errores.
+Hay que tener en cuenta que si se quiere [utilizar `??` junto a los operadores lógicos](https://v8.dev/features/nullish-coalescing#mixing-and-matching-operators) **AND** `&&` o **OR** `||` es necesario añadir paréntesis para evitar errores.
 
 ```javascript
 expresion && expresion ?? expresion;

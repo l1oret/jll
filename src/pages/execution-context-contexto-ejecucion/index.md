@@ -4,7 +4,7 @@ date: '2020-07-25'
 description: 'O mas bien, el de cuando empecé a leer la especificación ECMAScript por el capítulo del execution context.'
 ---
 
-O mas bien, el de cuando empecé a leer la especificación ECMAScript por el capítulo del execution context. No fue mi mejor idea, la especificación es dura de leer, hace falta motivación, en alquel momento me conformé con acabar ese capítulo. Entenderlo ya fue otra cosa, una lectura no fue ni mucho menos suficiente, para llegar a comprender al menos algo del documento. Pero bueno un comienzo es un comienzo.
+O mas bien, el de cuando empecé a leer la especificación ECMAScript por el capítulo del **execution context**. No fue mi mejor idea, la especificación es dura de leer, hace falta motivación, en aquel momento me conformé con acabar ese capítulo. Entenderlo ya fue otra cosa, una lectura no fue ni mucho menos suficiente, para llegar a comprender al menos algo del documento. Pero bueno un comienzo es un comienzo.
 
 ## ¿Qué es el execution context?
 
@@ -16,7 +16,7 @@ Partiendo de esa definición, podemos hacernos solo una ligera idea de lo que es
 
 ## Execution context stack y running execution context
 
-Por lo tanto, siempre que se ejecute código JavaScript, se crearán desde uno a infinitos contextos de ejecución. Todos esos contextos que se creen se irán apilando dentro del [execution context stack](https://tc39.es/ecma262/#execution-context-stack). El funcionamiento de la pila del contexto de ejecución se basa en una cola [LIFO](https://es.wikipedia.org/wiki/Last_in,_first_out), en la cuál el último contexto de ejecución en entrar es el primero en salir. Ese último contexto que entre a la pila, es decir, el que este mas arriba (según se mire) en la cola será siempre el [running execution context](https://tc39.es/ecma262/#running-execution-context). En caso de exisitir únicamente un contexto de ejecución en la pila, entonces ese será el running execution context, ya que aunque sea el único de la pila seguirá estando el más alto en la cola.
+Por lo tanto, siempre que se ejecute código JavaScript, se crearán desde uno a infinitos contextos de ejecución. Todos esos contextos que se creen se irán apilando dentro del [execution context stack](https://tc39.es/ecma262/#execution-context-stack). El funcionamiento de la pila del contexto de ejecución se basa en una cola [LIFO](https://es.wikipedia.org/wiki/Last_in,_first_out), en la cuál el último contexto de ejecución en entrar es el primero en salir. Ese último contexto que entre a la pila, es decir, el que este mas arriba (según se mire) en la cola será siempre el [running execution context](https://tc39.es/ecma262/#running-execution-context). En caso de existir únicamente un contexto de ejecución en la pila, entonces ese será el running execution context, ya que aunque sea el único de la pila seguirá estando el más alto en la cola.
 
 ```javascript
 function acumulador(n) {
@@ -88,13 +88,13 @@ executionContextStack = [];
 Es interesante recalcar los siguientes puntos acerca del **execution context stack**:
 1. Es single threaded.
 2. Es síncrono.
-3. Contendrá únicamente un global exectuion context.
-4. Puodrá contener hasta infinitos function execution context.
+3. Contendrá únicamente un global execution context.
+4. Podrá contener hasta infinitos function execution context.
 5. Cada llamada a una función creará un nuevo contexto de ejecución, sin importar, tal y como mencionaba antes, si la llamada es asi misma o no.
 
 ## El execution context en detalle
 
-El execution context, contiene los siguientes state components:
+El execution context, contiene los siguientes **state components**:
 
 - Code evaluation state 
 - Function
@@ -103,7 +103,7 @@ El execution context, contiene los siguientes state components:
 - [VariableEnvironment](https://tc39.es/ecma262/#table-23)
 - [LexicalEnvironment](https://tc39.es/ecma262/#table-23)
 
-Los dos que más nos interesan y de los cuales vamos a hablar son el **LexicalEnvironment** y el **VariableEnvironment**, ambos componentes son [Environments Records](https://tc39.es/ecma262/#sec-environment-records) del execution context. Pero antes de centranos en ellos, hay que tener en cuenta que ambos componentes estan relacionados con las fases de creación del execution context. Cada vez que se crea un execution context se hace en dos fases:
+Los dos que más nos interesan y de los cuales vamos a hablar son el **LexicalEnvironment** y el **VariableEnvironment**, ambos componentes son [Environments Records](https://tc39.es/ecma262/#sec-environment-records) del execution context. Pero antes de centranos en ellos, hay que tener en cuenta que ambos componentes están relacionados con las fases de creación del execution context. Cada vez que se crea un execution context se hace en dos fases:
 
 1. Creation stage
 2. Execution stage
