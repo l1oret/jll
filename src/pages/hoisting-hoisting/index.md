@@ -22,7 +22,7 @@ console.log(blog);
 var blog = `Out of the loop`;
 ```
 
-Al ejecutar el código del ejemplo vemos que no genera ningún error y que además nos muestra por la consola `undefined`. En la fase de creación del contexto de ejecución se inicializa la variable declarada `blog` como `undefined`, por lo que cuando llega la fase de ejecución esta tiene asignado el valor `undefined` y por ese motivo no genera ningún error.
+Al ejecutar el código del ejemplo vemos que no genera ningún error y que además nos muestra por la consola `undefined`. En la fase de creación del contexto de ejecución se inicializó la variable declarada `blog` como `undefined`, por lo que cuando llega la fase de ejecución esta tiene asignado el valor `undefined` y por ese motivo no genera ningún error.
 
 Algo parecido sucede con las funciones, en la mencionada primera fase son almacenadas en memoria y por lo tanto no importa el lugar en que las declaremos.
 
@@ -34,4 +34,4 @@ function saludar() {
 }
 ```
 
-A este funcionamiento de inicialización funciones y variables declaradas dentro de las fases del creación del contexto de ejecución es lo que se conoce habitualmente como **hoisting**.
+A este funcionamiento de inicialización de funciones y variables declaradas dentro de las fases del creación del contexto de ejecución es lo que se conoce habitualmente como **hoisting**.
